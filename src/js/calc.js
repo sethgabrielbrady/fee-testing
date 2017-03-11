@@ -3,15 +3,13 @@
 
     window.calc = window.calc || {};
 
-    window.calc.sum = sum;
-
     /**
      * Adds whatever numbers are provided and returns the total
      * @param  {Array} numbers  The numbers to add together
      * @return {Number}         The total of all numbers
      */
-    function sum(numbers) {
-        var total = 0;
+    window.calc.sum = function sum(numbers) {
+        let total = 0;
 
         if (!numbers) {
             return total;
@@ -20,7 +18,8 @@
         numbers.forEach(function addThem(num) {
             total += num;
         });
-    }
+
+    };
 
     /**
      * Returns the factorial for the given number which is defined as:
@@ -31,16 +30,16 @@
      * @return {Number}            The final factorial value
      */
     function factorial(topNumber) {
-        var i;
-        var total = 0;
+        const total = 0;
 
         if (typeof(topNumber) !== 'number') {
             return 0;
         }
 
-        for (i=1; i<=topNumber; i++) {
+        for (let i = 1; i <= topNumber; i++) {
             total *= i;
         }
+
         return total;
     }
 
