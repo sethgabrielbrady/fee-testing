@@ -52,11 +52,10 @@
                 });
 
 
-            // it('should return 0 when an array of something other than numbers is passed', function(){
-            //   let result = window.calc.sum(['green', true]);
-            //   expect(result).to.be.a('number');
-            //   expect(result).to.be.equal(0);
-            // });
+            it('should return NaN when an array of something other than numbers is passed', function(){
+              let result = window.calc.sum(['green', true]);
+              expect(result).to.be.NaN;
+            });
 
 
 
@@ -76,7 +75,7 @@
 //if only 1 num is passed - check!!!
 //if no numbers or and empty array is passed - check!!!
 //something other than array is passed--check!!!
-//if something other than a number is passed inside and array
+//if something other than a number is passed inside and array-check!!!
 //
 //
 //
