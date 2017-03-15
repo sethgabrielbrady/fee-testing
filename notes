@@ -109,6 +109,8 @@ we need to fork and clone the project
 
 
 
-
-
- 
+Write tests for the two functions in the window.calc namespace...
+The description of the functions are in the source code, read them!
+Ensure that you are testing not just the success conditions,
+but also the failures! For example, ensure that a function acts as
+expected both with good arguments and bad arguments!
