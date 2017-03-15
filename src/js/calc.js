@@ -10,15 +10,16 @@
      */
     window.calc.sum = function sum(numbers) {
         let total = 0;
-
-        if (!numbers) {
+        if  ((!numbers) || !(Array.isArray(numbers)) ){
             return total;
+
         }
-        // || (isNaN(numbers))
+
+
 
         numbers.forEach(function addThem(num) {
-           total += num;
-
+        
+          total += num;
         });
 
         return total;
