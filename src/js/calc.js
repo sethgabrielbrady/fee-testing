@@ -14,10 +14,14 @@
         if (!numbers) {
             return total;
         }
+        // || (isNaN(numbers))
 
         numbers.forEach(function addThem(num) {
-            total += num;
+           total += num;
+
         });
+
+        return total;
 
     };
 
