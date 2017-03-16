@@ -10,7 +10,7 @@
      */
     window.calc.sum = function sum(numbers) {
         let total = 0;
-        if  ((!numbers) || !(Array.isArray(numbers)) ){
+        if ((!numbers) || !(Array.isArray(numbers))) {
             return total;
 
         }
@@ -18,10 +18,10 @@
 
 
         numbers.forEach(function addThem(num) {
-          if (typeof(num) === 'string'){
-            num = parseInt(num);
-          }
-          total += num;
+            if (typeof(num) === 'string') {
+                num = parseInt(num);
+            }
+            total += num;
         });
 
         return total;
@@ -40,8 +40,8 @@
         let total = 1;
 
 
-        if (typeof(topNumber) === 'string'){
-        topNumber = parseInt(topNumber);
+        if (typeof(topNumber) === 'string') {
+            topNumber = parseInt(topNumber);
         }
 
         if (typeof(topNumber) !== 'number') {
