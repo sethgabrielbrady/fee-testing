@@ -6,13 +6,16 @@
 
         describe('sum function', function() {
 
-            it('should return a number when an argument is passed', function() {
-                let result = window.calc.sum([1, 1, 1]);
-                expect(result).to.be.a('number');
-                expect(result).to.equal(3);
+            it('should be a function', function(){
+                  expect(window.calc.sum).to.be.a('function');
             });
 
-            it('should return a number when only one number is passed', function() {
+            it('should return a number when an argument is passed', function() {
+                let result = window.calc.sum([1, 1, 1]);
+                expect(result).to.be.a('number').and.to.equal(3);
+            });
+
+            it('should return a number when only one number is passed inside the array', function() {
                 let result = window.calc.sum([1]);
                 expect(result).to.be.a('number');
                 expect(result).to.equal(1);
@@ -24,17 +27,31 @@
                 expect(result).to.equal(0);
             });
 
-            it('should return 0 something other than array is passed', function() {
+            it('should return 0 when something other than array is passed', function() {
                 let result = window.calc.sum('3');
                 expect(result).to.be.a('number');
                 expect(result).to.equal(0);
             });
 
-            it('should return a number when an array containing numbers as strings is passed ', function() {
+
+            it('should return a number when an array containing numbers as strings', function() {
                 let result = window.calc.sum(['1', '1']);
                 expect(result).to.be.a('number');
                 expect(result).to.equal(2);
             });
+
+            it('should return a number when an array containing mixed types are included', function() {
+                let result = window.calc.sum(['1', 2]);
+                expect(result).to.be.a('number');
+                expect(result).to.equal(3);
+            });
+
+            it('should return a number when an array containing mixed types are included', function() {
+                let result = window.calc.sum(['1', 'bill']);
+                expect(result).to.be.a('number');
+                expect(result).to.be.NaN;
+            });
+
 
             it('should return NaN when an array of something other than numbers is passed', function() {
                 let result = window.calc.sum(['green', true]);
@@ -46,6 +63,11 @@
 
 
         describe('factorial test', function() {
+
+
+            it('should be a function', function(){
+                  expect(window.calc.factorial).to.be.a('function');
+            });
 
             it('should return 1 when 1 is passed', function() {
                 let result = window.calc.factorial(1);
@@ -66,7 +88,7 @@
                 expect(result).to.equal(0);
             });
 
-            it('should return a number as a string as a number', function() {
+            it('should return a number when a number a as a string is passed', function() {
                 let result = window.calc.factorial('3');
                 expect(result).to.be.a('number');
                 expect(result).to.equal(6);
@@ -80,7 +102,7 @@
 
 
             it('should return NaN when NaN is passed to it', function() {
-                let result = window.calc.factorial(NaN);
+                let result = window.calc.factorial('foo');
                 expect(result).to.be.NaN;
             });
 
@@ -89,21 +111,3 @@
     });
 
 })();
-
-
-
-//assertions for checking the sum function
-//if 2 numbers are passed-check!!!
-//if only 1 num is passed - check!!!
-//if no numbers or and empty array is passed - check!!!
-//something other than array is passed--check!!!
-//if something other than a number is passed inside and array-check!!!
-
-
-//  assertions for checking the factorial function
-//  check the function factors correctly with numbers-check!!!
-//  check if something other than a number is passed-check!!!
-//  check if no numbers are passed- check!!!
-//  convert to  number is a number as a string is passed-check!!!
-//
-//

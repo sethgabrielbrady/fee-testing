@@ -15,14 +15,13 @@
 
         }
 
-
-
-        numbers.forEach(function addThem(num) {
-            if (typeof(num) === 'string') {
-                num = parseInt(num);
-            }
-            total += num;
-        });
+    numbers.forEach(function addThem(num) {
+          num = Number(num);
+          // if (typeof(num) === 'string') {
+          //     num = parseInt(num);
+          // }
+          total += num;
+      });
 
         return total;
 
@@ -39,7 +38,6 @@
     window.calc.factorial = function factorial(topNumber) {
         let total = 1;
 
-
         if (typeof(topNumber) === 'string') {
             topNumber = parseInt(topNumber);
         }
@@ -51,7 +49,6 @@
         if (isNaN(topNumber)) {
             return;
         }
-
 
         for (let i = 1; i <= topNumber; i++) {
 

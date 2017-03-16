@@ -33,7 +33,7 @@ ASSERTIONS for a test for a function  that will sum two numbers:
   a collection of describe block tests might be called a Suite of Tests
 
   TOOL USED FOR TESTING
-  -mocha: a TESTING library
+  -mocha: a TESTING library-allows for the individual tests-describe block
   -chai: intended to be used with mocha. will provide ASSERTIONS
   -karma: a TEST RUNNER.  Will provide structure for running the tests
 
@@ -114,3 +114,32 @@ The description of the functions are in the source code, read them!
 Ensure that you are testing not just the success conditions,
 but also the failures! For example, ensure that a function acts as
 expected both with good arguments and bad arguments!
+
+
+
+
+HOMEWORK REVIEW NOTES
+03/16/17
+
+
+let result = chai.expect //basically just a shortening of chai expect
+
+
+// describe just contains the group of assertions
+
+
+describe('math tests', function() { //describe block
+
+    describe('sum function', function() { //describe block
+
+
+  //'it' is the test
+    it('should return a number when an argument is passed', function() {
+        let result = window.calc.sum([1, 1, 1]); //sets 'result' to the
+        //to the result of the sum function that has been passed an array
+        expect(result).to.be.a('number');//assertion that says what argument type is
+        expect(result).to.equal(3);//assertion
+    });
+
+
+will need to do console.info inside of karma
